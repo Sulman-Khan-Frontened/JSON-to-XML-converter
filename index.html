@@ -89,6 +89,77 @@
             })
         })
 
+        var dummyJson = `{
+  "company": {
+    "name": "ABC Corporation",
+    "employees": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "position": "Software Engineer",
+        "salary": 80000
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "position": "Data Analyst",
+        "salary": 70000
+      },
+      {
+        "id": 3,
+        "name": "Mike Johnson",
+        "position": "Project Manager",
+        "salary": 90000
+      },
+      {
+        "id": 4,
+        "name": "Emily Davis",
+        "position": "UX Designer",
+        "salary": 75000
+      },
+      {
+        "id": 5,
+        "name": "Chris Wilson",
+        "position": "Marketing Manager",
+        "salary": 85000
+      }
+    ],
+    "departments": [
+      {
+        "name": "Engineering",
+        "manager": "Mike Johnson",
+        "employees": [1]
+      },
+      {
+        "name": "Data Analysis",
+        "manager": "Jane Smith",
+        "employees": [2]
+      },
+      {
+        "name": "Project Management",
+        "manager": "Mike Johnson",
+        "employees": [3]
+      },
+      {
+        "name": "Design",
+        "manager": "Emily Davis",
+        "employees": [4]
+      },
+      {
+        "name": "Marketing",
+        "manager": "Chris Wilson",
+        "employees": [5]
+      }
+    ]
+  }
+}
+`
+
+        document.onload = () => {
+        document.querySelector("#jsonInput").value = dummyJson;
+            
+        }
+
         function convertJSONtoXML() {
             var jsonInputValue = jsonInput.value.trim();
             
